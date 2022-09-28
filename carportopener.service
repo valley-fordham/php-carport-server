@@ -1,0 +1,12 @@
+[Unit]
+Description=Carport Opener Setup
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=/home/pi/gitclones/php-carport-server/carportopener start
+SyslogIdentifier=Diskutilization
+
+[Install]
+WantedBy=multi-user.target
