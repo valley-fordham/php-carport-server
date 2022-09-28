@@ -6,11 +6,11 @@ case "$1" in
   start)
     echo "Starting carportopener"
     # Turn on GPIO 7 to keep relay off
-    /usr/local/bin/gpio write 7 1
-    /usr/local/bin/gpio mode 7 out
+    gpio write 7 1
+    gpio mode 7 out
     # Turn on GPIO 3, outputs signal read in by GPIO 0 for carport status
-    /usr/local/bin/gpio write 2 1
-    /usr/local/bin/gpio mode 2 out
+    gpio write 2 1
+    gpio mode 2 out
     ;;
   stop)
     echo "Stopping carportopener"
